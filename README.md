@@ -1,12 +1,25 @@
-# React + Vite
+# k-Tape Turing Machine Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web app to explore **deterministic and nondeterministic k-tape Turing machines**. It renders the **state graph**, the **configuration graph** (reachable configurations with tape contents and head positions), and the **unfolded computation tree**. You can step through runs, branch manually on nondeterminism, and switch between compact and detailed views.
 
-Currently, two official plugins are available:
+## Features
+- k-tape machines (deterministic & nondeterministic)
+- YAML input format
+- Live execution with step/auto-run and manual branching on nondeterministic choices
+- Visualizations:
+  - **State graph**
+  - **Configuration graph** with incremental expansion
+  - **Computation tree** with optional path compression
+- Two node styles: **Circles** and **Cards**
+- Editor with schema validation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Quick Start (Local)
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js (LTS recommended) and npm
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Install, Build, Preview
+```bash
+npm install
+npm run build
+npm run preview

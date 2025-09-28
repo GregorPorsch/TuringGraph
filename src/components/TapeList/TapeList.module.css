@@ -1,0 +1,25 @@
+.tapeSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tapecell > rect {
+  fill: white;
+  stroke: gray;
+}
+
+.tapecell > text {
+  stroke: black;
+  stroke-width: 0.5;
+  pointer-events: none;
+  text-anchor: middle;
+  font-family:
+    'Source Code Pro', 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Courier', monospace;
+  font-size: 25px;
+}
+
+.tapehead {
+  fill: none;
+  stroke: gold;
+}

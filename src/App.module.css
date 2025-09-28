@@ -1,0 +1,87 @@
+.app_container {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* ~60/40 */
+  grid-template-rows: minmax(420px, 1fr) auto auto;
+  gap: 16px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.graph_area {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  min-width: 0;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tape_area {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  min-width: 0;
+  min-height: 0;
+}
+
+.editor_area {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  contain: size;
+}
+
+.bottom_area {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  min-width: 0;
+  min-height: 0;
+}
+
+.bottom_split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.toastRoot {
+  position: relative;
+  padding-right: 28px;
+}
+
+.toastClose {
+  position: absolute !important;
+  top: -3px !important;
+  right: -12px !important;
+  left: auto !important;
+  margin-left: 0 !important;
+}
+
+:global([data-sonner-toaster]:hover) {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 18px !important;
+}
+
+:global([data-sonner-toaster]:hover [data-sonner-toast]) {
+  position: static !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+.portal_mount {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.portal_hidden {
+  visibility: hidden;
+  pointer-events: none;
+}

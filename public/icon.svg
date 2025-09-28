@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Edges (endet vor den Kreisen) -->
+  <line x1="42" y1="64" x2="86" y2="38" stroke="#fff" stroke-width="10"/>
+  <line x1="42" y1="64" x2="86" y2="90" stroke="#fff" stroke-width="10"/>
+  
+  <!-- Nodes -->
+  <circle cx="32" cy="64" r="20" fill="#4885c4"/> 
+  <circle cx="96" cy="32" r="20" fill="#dd97c8"/> 
+  <circle cx="96" cy="96" r="20" fill="#d06e73"/> 
+</svg>

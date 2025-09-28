@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "checkJs": false,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@services/*": ["src/services/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@zustands/*": ["src/zustands/*"],
+      "@mytypes/*": ["src/mytypes/*"],
+      "@tmfunctions/*": ["src/tmfunctions/*"],
+      "@theme": ["src/theme/index.tsx"],
+      "@theme/*": ["src/theme/*"]
+    },
+    "resolveJsonModule": true
+  },
+  "include": ["src", "test", "global.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

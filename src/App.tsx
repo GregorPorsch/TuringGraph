@@ -8,7 +8,7 @@ import { ComputeTreeDialog } from '@components/MainPage/ComputeTreeDialog';
 import {
   FullscreenPortals,
   type FullscreenPortalConfig,
-} from '@components/MainPage/FullScreenPortals';
+} from '@components/MainPage/FullscreenPortals';
 import { AppToaster } from '@components/MainPage/AppToaster';
 import { TMGraphWrapper } from '@components/TMGraph/TMGraph';
 import { ConfigGraphWrapper } from '@components/ConfigGraph/ConfigGraph';

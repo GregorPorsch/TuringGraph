@@ -578,7 +578,7 @@ function GithubCallToAction() {
           Open-source on GitHub
         </Typography>
         <MuiLink
-          href="https://github.com"
+          href="https://github.com/GregorPorsch/TuringGraph"
           target="_blank"
           rel="noreferrer"
           underline="none"

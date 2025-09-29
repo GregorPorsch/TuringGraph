@@ -33,12 +33,19 @@ export function DashboardLayout({
   onOpenCompute,
 }: DashboardLayoutProps) {
   return (
-    <Container maxWidth="xl" sx={{ px: 2, pt: 2, pb: 0 }}>
+    <Container
+      maxWidth="xl"
+      sx={{
+        px: { xs: 1.5, sm: 2, lg: 3 },
+        pt: { xs: 1.5, md: 2 },
+        pb: 0,
+      }}
+    >
       <div className={styles.app_container}>
         <section className={styles.graph_area}>
           <PanelCard
             title="Turing Machine"
-            minHeight={500}
+            minHeight={{ xs: 260, sm: 320, md: 460, lg: 500 }}
             actions={
               <Tooltip title="Open Fullscreen">
                 <IconButton
@@ -77,7 +84,7 @@ export function DashboardLayout({
           <div className={styles.bottom_split}>
             <PanelCard
               title="Configuration Graph"
-              minHeight={640}
+              minHeight={{ xs: 320, sm: 380, md: 520, lg: 640 }}
               actions={
                 <Tooltip title="Open Fullscreen">
                   <IconButton
@@ -105,7 +112,7 @@ export function DashboardLayout({
 
             <PanelCard
               title="Computation Tree"
-              minHeight={640}
+              minHeight={{ xs: 320, sm: 380, md: 520, lg: 640 }}
               actions={
                 <>
                   <Button size="small" variant="contained" onClick={onOpenCompute}>

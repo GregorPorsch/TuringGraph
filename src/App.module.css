@@ -49,6 +49,50 @@
   min-height: 0;
 }
 
+@media (max-width: 1200px) {
+  .app_container {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+  }
+
+  .graph_area,
+  .tape_area,
+  .editor_area,
+  .bottom_area {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .editor_area {
+    min-height: 0;
+  }
+
+  .bottom_split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .app_container {
+    gap: 12px;
+  }
+
+  .graph_area,
+  .bottom_area {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .app_container {
+    gap: 10px;
+  }
+
+  .bottom_split {
+    gap: 12px;
+  }
+}
+
 .toastRoot {
   position: relative;
   padding-right: 28px;

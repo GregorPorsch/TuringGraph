@@ -200,7 +200,11 @@ const CodeEditor: React.FC = () => {
         contain: 'size',
       }}
     >
-      <Stack direction="row" spacing={1} sx={{ mb: 1, flexShrink: 0 }}>
+      <Stack
+        direction={{ xs: 'column', sm: 'row' }}
+        spacing={1}
+        sx={{ mb: 1, flexShrink: 0 }}
+      >
         <Button
           fullWidth
           size="small"

@@ -15,8 +15,18 @@ export function MainHeader() {
         color: theme.palette.primary.contrastText,
       }}
     >
-      <Toolbar variant="dense">
-        <Typography variant="h5" sx={{ fontWeight: 500 }}>
+      <Toolbar
+        variant="dense"
+        sx={{ flexWrap: { xs: 'wrap', md: 'nowrap' }, gap: { xs: 1, md: 0 } }}
+      >
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: 500,
+            fontSize: { xs: '1.1rem', sm: '1.3rem', md: '1.5rem' },
+            lineHeight: 1.25,
+          }}
+        >
           Configuration Graph Visualizer
         </Typography>
         <Box sx={{ flexGrow: 1 }} />

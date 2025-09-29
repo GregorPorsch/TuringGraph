@@ -1,5 +1,5 @@
 // src/components/TapeList/TapeList.tsx
-import { Button, ButtonGroup, Stack, useTheme } from '@mui/material';
+import { Box, Button, ButtonGroup, Stack, useMediaQuery, useTheme } from '@mui/material';
 import { PlayArrow, Stop, SkipNext, RestartAlt } from '@mui/icons-material';
 
 import { useGlobalZustand } from '@zustands/GlobalZustand';
@@ -16,6 +16,7 @@ function TapeList() {
   const numTapes = useGlobalZustand((state) => state.numberOfTapes);
 
   const isRunningLive = useGlobalZustand((state) => state.runningLive);
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Stack spacing={1}>
@@ -27,8 +28,24 @@ function TapeList() {
       </Stack>
 
       {/* Controls */}
-      <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
-        <ButtonGroup size="small" variant="contained">
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: isSmallScreen ? 'center' : 'flex-end',
+          width: '100%',
+        }}
+      >
+        <ButtonGroup
+          size="small"
+          variant="contained"
+          orientation={isSmallScreen ? 'vertical' : 'horizontal'}
+          fullWidth={isSmallScreen}
+          sx={{
+            '& .MuiButtonGroup-grouped': {
+              minWidth: isSmallScreen ? '100%' : undefined,
+            },
+          }}
+        >
           {!isRunningLive ? (
             <Button
               onClick={() => startRunningLive()}
@@ -79,7 +96,7 @@ function TapeList() {
             Reset
           </Button>
         </ButtonGroup>
-      </div>
+      </Box>
     </Stack>
   );
 }

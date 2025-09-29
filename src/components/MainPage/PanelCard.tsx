@@ -1,12 +1,13 @@
 // src/components/MainPage/PanelCard.tsx
 import { Box, Typography, Paper, Divider, Stack } from '@mui/material';
+import type { ResponsiveStyleValue } from '@mui/system';
 
 /* --- Reusable Card for Panels --- */
 export function PanelCard(props: {
   title: string;
   children: React.ReactNode;
   actions?: React.ReactNode;
-  minHeight?: number;
+  minHeight?: ResponsiveStyleValue<number | string>;
   denseBodyPadding?: boolean;
 }) {
   const { title, children, actions, minHeight, denseBodyPadding = false } = props;
@@ -45,7 +46,7 @@ export function PanelCard(props: {
       <Box
         sx={{
           flex: 1,
-          ...(minHeight !== undefined ? { minHeight } : {}),
+          minHeight,
           position: 'relative',
           ...(denseBodyPadding ? { p: 1.5 } : {}),
           display: 'flex',

@@ -635,7 +635,10 @@ export default function SiteFooter() {
             : t.palette.background.paper,
       }}
     >
-      <Container maxWidth="xl" sx={{ py: 3 }}>
+      <Container
+        maxWidth="xl"
+        sx={{ py: { xs: 3, md: 4 }, px: { xs: 1.5, sm: 2, lg: 3 } }}
+      >
         <FooterIntro />
         <Divider sx={{ my: 2 }} />
         <TheoryGrid />

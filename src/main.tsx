@@ -8,7 +8,7 @@ let root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 import { setTuringMachineSchema } from '@utils/parsing';
 
-fetch('/turingMachineSchema.json')
+fetch(`${import.meta.env.BASE_URL}turingMachineSchema.json`)
   .then((res) => res.json())
   .then((schema) => setTuringMachineSchema(schema));
 

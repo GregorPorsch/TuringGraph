@@ -13,7 +13,7 @@ import { useEditorZustand } from '@zustands/EditorZustand';
 import { useGraphZustand } from '@zustands/GraphZustand';
 import { ConfigNodeMode, DEFAULT_TREE_DEPTH } from '@utils/constants';
 
-const SCHEMA_URL = '/turingMachineSchema.json';
+const SCHEMA_URL = `${import.meta.env.BASE_URL}turingMachineSchema.json`;
 const MODEL_URI = 'inmemory://model/turingMachine.yaml'; // Can be any unique URI
 
 const CodeEditor: React.FC = () => {
